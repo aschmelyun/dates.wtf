@@ -135,6 +135,7 @@
 <style>
   .wrapper {
     margin: 0 auto;
+    padding: 0 1rem;
     max-width: 960px;
   }
   .date-time {
@@ -142,19 +143,21 @@
     position: relative;
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
     justify-content: space-between;
-    height: 112px;
     overflow: visible;
   }
   .section {
     background: #fff;
     vertical-align: top;
-    margin: 0 1rem;
     border-radius: 4px;
     box-shadow: 0 0 0 rgba(30, 39, 46, 0);
     transition: all 0.25s ease-in;
     padding: 0.75rem 1.5rem 2rem;
     color: #1E272E;
+    width: 100%;
+    text-align: left;
+    margin: 0 0 1rem;
   }
   .section:hover {
     cursor: pointer;
@@ -166,9 +169,12 @@
   .active-item {
     position: relative;
   }
+  .section.is-active .active-item {
+    margin: 0 0 0.5rem;
+  }
   .active-item span {
     font-weight: 700;
-    font-size: 56px;
+    font-size: 32px;
   }
   .active-item label {
     display: block;
@@ -197,7 +203,7 @@
     font-size: 27px;
   }
   .display-formats {
-    margin: 4rem 0 0 2.5rem;
+    margin: 2rem 0 0;
   }
   .format {
     text-align: left;
@@ -224,5 +230,27 @@
   .format span strong {
     font-weight: 700;
     color: #485460;
+  }
+  @media screen and (min-width: 768px) {
+    .active-item span {
+      font-size: 42px;
+    }
+  }
+  @media screen and (min-width: 996px) {
+    .date-time {
+      flex-direction: row;
+      height: 112px;
+    }
+    .section {
+      margin: 0 1rem;
+      width: auto;
+      text-align: center;
+    }
+    .active-item span {
+      font-size: 56px;
+    }
+    .display-formats {
+      margin: 4rem 0 0 2.5rem;
+    }
   }
 </style>

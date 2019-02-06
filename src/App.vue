@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
 }
@@ -43,17 +46,24 @@ header {
   text-align: center;
 }
 footer {
-  text-align: center;
+  padding: 0 1rem 1rem 0;
+  text-align: right;
   font-size: 14px;
   font-weight: 400;
   color: #808E9B;
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
 }
 footer a {
   text-decoration: none;
   font-weight: 700;
   color: #485460;
+}
+@media screen and (min-width: 996px) {
+  footer {
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
 </style>
