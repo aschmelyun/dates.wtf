@@ -6,6 +6,9 @@
     <main>
       <date-picker></date-picker>
     </main>
+    <footer>
+      <div class="credit">Built by <a href="https://twitter.com/aschmelyun">@aschmelyun</a> &mdash; Vue + Netlify</div>
+    </footer>
   </div>
 </template>
 
@@ -38,5 +41,19 @@ header {
   margin: 0;
   padding: 2rem 0;
   text-align: center;
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #808E9B;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+footer a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #485460;
 }
 </style>
